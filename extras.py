@@ -1,3 +1,4 @@
+#extra: randomly generate lists
 import random
 
 a = [random.randint(1,90) for _ in range(10)]
