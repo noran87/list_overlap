@@ -1,10 +1,14 @@
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
-output = []
+import random
 
-for i in a:
-    if i in b and i not in output:
-        output.append(i)
-        
-print(output)        
+#randomly generate twp lists
+a = [random.randint(1,90) for _ in range(10)]
+b = [random.randint(1, 20) for _ in range(12)]
+
+#find common elements between the two lists
+output = list(set([x for x in a if x in b]))
+
+#print the output
+print('the first random list: ', a)
+print('the second random list: ', b)
+print(output)
